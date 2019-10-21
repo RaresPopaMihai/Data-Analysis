@@ -37,3 +37,20 @@ print(y)
 plt.plot(y)
 plt.show()
 print(y)
+
+# z=[x**2 for x in (-100,100)]
+# yy=[np.cos(x)for x in z]
+# print(yy)
+# plt.plot(yy)
+# plt.show()
+
+dict1={1:'mama',2:"tata",
+       3:'me', 4:"brother"}
+
+print(dict1)
+keys=dict1.keys()
+print(keys)
+print(type(keys))
+values = dict1.values()
+print(values)
+print(type(values))
