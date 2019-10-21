@@ -54,3 +54,7 @@ print(type(keys))
 values = dict1.values()
 print(values)
 print(type(values))
+
+dict2 = {x:np.log(x) for x in range(1,100)}
+plt.plot(list(dict2.keys()), list(dict2.values()))
+plt.show()
