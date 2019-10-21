@@ -1,0 +1,39 @@
+import matplotlib.pyplot as plt
+import numpy as np
+def fun_1(p1):
+    print("entering fun_1, p1 = ", p1, "id = ",id(p1))
+    p1=11
+    print("exiting fun_1, p1 = ", p1, "id = ", id(p1))
+
+# a = "mama"
+# print("before fun_1 call, a = ", a," id = ",id(a))
+# fun_1(a)
+# print("after fun_1 call, a = ", a," id = ",id(a))
+
+def fun_2(p1):
+    print("entering fun_1, p1 = ", p1, "id = ", id(p1))
+    #p1 += ["a new value"]
+    p1[0]='this is a new value'
+    print("exiting fun_1, p1 = ", p1, "id = ", id(p1))
+
+# list1 = [1,2,3]
+# print("before fun_1 call, list1 = ", list1," id = ",id(list1))
+# fun_2(list1)
+# print("after fun_1 call, list1 = ", list1," id = ",id(list1))
+
+def fun_3(p1, *p2):
+    print(p1)
+    for i in p2:
+        print(i)
+
+# fun_3(1,2,3,4,"mama")
+# list2 = [2,3,4,"TATA"]
+# fun_3(1,list2)
+# fun_3("now",*list2)
+
+#y = [x for x in range (100)]
+y=[np.cos(x) for x in range(100)]
+print(y)
+plt.plot(y)
+plt.show()
+print(y)
