@@ -1,0 +1,26 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x=[np.cos(t) for t in np.arange(0,np.pi*2,0.01)]
+print(x)
+y=[np.sin(t) for t in np.arange(0,np.pi*2,0.01)]
+print(y)
+plt.plot(x,y,color="black")
+plt.axhline(0,color="red")
+plt.axvline(0,color="red")
+plt.xlabel("First PC")
+plt.xlabel("Second PC")
+plt.title("The Correlation Circle")
+#plt.show()
+
+def normalize(X):
+    Xmin=np.min(X,axis=0)
+    Xmax=np.max(X,axis=0)
+    Xnorm=(X-Xmin)/(Xmax-Xmin)
+    return Xnorm
+
+def standardize(X):
+    means=np.mean(X,axis=0)
+    stds=np.std(X,axis=0)
+    return (X-means)/stds
