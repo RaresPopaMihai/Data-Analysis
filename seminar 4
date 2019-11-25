@@ -1,0 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = [np.cos(t) for t in np.arange(0,np.pi*2,0.01)]
+#print(x)
+
+y=[np.sin(t) for t in np.arange(0,np.pi*2,0.01)]
+plt.plot(x,y,color="black")
+plt.axhline(0,color="green")
+plt.axvline(0,color="green")
+plt.title("Marele cerc mare")
+plt.show()
